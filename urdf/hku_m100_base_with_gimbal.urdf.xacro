@@ -114,7 +114,7 @@
       <sensor type="camera" name="camera_camera_sensor">
         <update_rate>10</update_rate>
         <camera>
-          <pose>0.027 0 0 0 0 0</pose>
+          <pose>0.027 0 -0.027 0 1.57 0</pose>
           <horizontal_fov>${90 * M_PI/180.0}</horizontal_fov>
           <image>
             <format>R8G8B8</format>
@@ -131,8 +131,11 @@
           <cameraName>camera</cameraName>
           <alwaysOn>true</alwaysOn>
           <updateRate>10</updateRate>
-          <imageTopicName>camera/image</imageTopicName>
-          <cameraInfoTopicName>camera/camera_info</cameraInfoTopicName>
+          
+          <imageTopicName>/dji_sdk/image_raw</imageTopicName>
+          <cameraInfoTopicName>/dji_sdk/camera_info</cameraInfoTopicName>
+          <!-- <imageTopicName>camera/image</imageTopicName> -->
+          <!-- <cameraInfoTopicName>camera/camera_info</cameraInfoTopicName> -->
           <frameName>camera_optical_frame</frameName>
         </plugin>
       </sensor>
