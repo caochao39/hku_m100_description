@@ -102,7 +102,7 @@
       </collision>
     </link>
     
-    <joint name="camera_optical_joint" type="continuous">
+    <joint name="camera_optical_joint" type="floating">
       <origin xyz="0 0 0" rpy="${-M_PI/2} 0.0 ${-M_PI/2}" />
       <parent link="camera_link" />
       <child link="camera_optical_frame"/>
@@ -115,7 +115,8 @@
         <update_rate>10</update_rate>
         <camera>
           <!-- <pose>0.027 0 -0.027 0 1.57 0</pose> -->
-          <pose>0.027 0 -0.027 0 1.57 0</pose>
+          <!-- <pose>0.027 0 -0.027 0 1.57 0</pose> -->
+          <pose>0.027 0 -0.027 0 0 0</pose>
           <horizontal_fov>${94 * M_PI/180.0}</horizontal_fov>
           <image>
             <format>R8G8B8</format>
